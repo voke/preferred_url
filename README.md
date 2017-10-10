@@ -1,5 +1,8 @@
 # PreferredUrl
 
+This gem finds the preferred url (canonical url) for a given webpage focusing
+on product pages.
+
 ## Installation
 
 ```ruby
@@ -8,9 +11,6 @@
 ```
 
 ## Usage
-
-This gems finds the preferred URL (canonical url) for a given webpage focusing
-on product pages.
 
 ```ruby
 require 'preferred_url'
