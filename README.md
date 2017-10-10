@@ -53,9 +53,9 @@ _Not implemented yet_
 ```html
 <script type="application/ld+json">
   {
-  	"@context": "http://schema.org/",
-  	"@type": "Product",
-  	"url": "https://www.example.com/p/123"
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "url": "https://www.example.com/p/123"
   }
 </script>
 ```
