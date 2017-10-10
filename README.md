@@ -13,7 +13,7 @@ This gems finds the preferred URL (canonical url) for a given webpage focusing
 on product pages.
 
 ```ruby
-require 'preferred-url'
+require 'preferred_url'
 
 # By requesting URL
 url = PreferredUrl.crawl("http://example.com")
