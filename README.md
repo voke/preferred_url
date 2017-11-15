@@ -16,10 +16,10 @@ on product pages.
 require 'preferred_url'
 
 # By requesting URL
-url = PreferredUrl.crawl("http://example.com")
+res = PreferredUrl.crawl("http://example.com")
 
-# or provide html body
-url = PreferredUrl.find(html_body)
+p res.url # => canonical
+p res.last_requested_url # => last url if redirect
 
 ```
 
