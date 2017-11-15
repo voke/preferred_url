@@ -16,10 +16,10 @@ on product pages.
 require 'preferred_url'
 
 # By requesting URL
-res = PreferredUrl.crawl("http://example.com")
+res = PreferredUrl.crawl("https://is.gd/bOW1mt")
 
-p res.url # => canonical
-p res.last_requested_url # => last url if redirect
+p res.url # => "https://moz.com/learn/seo/canonicalization"
+p res.last_requested_url # => https://moz.com/learn/seo/canonicalization?foo=bar
 
 ```
 
