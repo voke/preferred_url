@@ -8,7 +8,7 @@ module PreferredUrl
     base_url = "#{final_url.scheme}://#{final_url.host}"
 
     result = Result.new
-    result.last_requested_url = final_url
+    result.last_requested_url = final_url.to_s
 
     url, strategy = Parser.find(body, base_url)
 
