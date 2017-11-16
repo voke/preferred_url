@@ -30,7 +30,11 @@ module PreferredUrl
     end
 
     def get
-      [response.body, response.env['url']]
+      {
+        status: response.status,
+        body: response.body,
+        loc: response.env['url']
+      }
     end
 
     def self.get(url)

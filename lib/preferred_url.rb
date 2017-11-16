@@ -4,16 +4,24 @@ module PreferredUrl
 
   def self.crawl(url)
 
-    body, final_url = Request.get(url)
-    base_url = "#{final_url.scheme}://#{final_url.host}"
-
+    resp = Request.get(url)
     result = Result.new
-    result.last_requested_url = final_url.to_s
+    result.status_code = resp[:status]
 
-    url, strategy = Parser.find(body, base_url)
+    if resp[:status] == 200
 
-    result.url = url
-    result.strategy = strategy
+      base_url = "#{resp[:loc].scheme}://#{resp[:loc].host}"
+
+      result.last_requested_url = resp[:loc].to_s
+
+      url, strategy = Parser.find(resp[:body], base_url)
+
+      result.url = url
+      result.strategy = strategy
+
+      result
+
+    end
 
     result
 
